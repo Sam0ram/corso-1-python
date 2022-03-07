@@ -101,10 +101,14 @@ while num_segreto != tentativo and not tent_0:
         tent_0 = True
 
 if tent_0:
-    print("hai perso")
+    print("hai perso!!")
 else:
+<<<<<<< HEAD
     print("bravo hai indovinato.")
 
 "for loop"
     
+=======
+    print("bravo hai indovinato")
+>>>>>>> 6ff811173ec500d277191a8f978cde561f23b745
     
