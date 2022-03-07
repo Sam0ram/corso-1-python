@@ -103,8 +103,8 @@ while num_segreto != tentativo and not tent_0:
 if tent_0:
     print("hai perso")
 else:
-    print("bravo hai indovinato....")
+    print("bravo hai indovinato.")
 
-   
+"for loop"
     
     
