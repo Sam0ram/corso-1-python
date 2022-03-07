@@ -1,4 +1,4 @@
-"""
+"""   
 #def e return
 from time import sleep
 
@@ -50,7 +50,7 @@ elif op == "*":
     print(num_1*num_2)
 else:
     print (" errore: operazione non valida ")
-"""    
+ 
     
     
 #dizionari #più facile da capire nell'esemio. comunque è (nome dizionario) = {
@@ -101,14 +101,29 @@ while num_segreto != tentativo and not tent_0:
         tent_0 = True
 
 if tent_0:
-    print("hai perso!!")
+    print("hai perso")
 else:
-<<<<<<< HEAD
     print("bravo hai indovinato.")
-
+ 
 "for loop"
-    
-=======
-    print("bravo hai indovinato")
->>>>>>> 6ff811173ec500d277191a8f978cde561f23b745
-    
+numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in numeri:
+    print(i)
+#elevamento a potenza
+
+base_num = float(input("inserisci un numero: "))
+esponente_num = float(input("a che poteza lo vuoi elevare?: "))
+risultato = base_num**esponente_num
+print("il risultato è: '"+str(risultato)+"'")
+"""   
+#griglia in 2D
+
+num_griglia = [ 
+    ["a", "b", "c"],
+    ["a", "b", "c"],
+    ["a", "b", "c"],
+    [0, 1]
+    [5, 6, 7, 8]
+]
+
+print(num_griglia[3][1])
