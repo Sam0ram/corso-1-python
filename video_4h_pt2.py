@@ -107,7 +107,7 @@ else:
  
 "for loop"
 numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-for i in numeri:
+for meri:
     print(i)
 #elevamento a potenza
 
@@ -115,15 +115,52 @@ base_num = float(input("inserisci un numero: "))
 esponente_num = float(input("a che poteza lo vuoi elevare?: "))
 risultato = base_num**esponente_num
 print("il risultato è: '"+str(risultato)+"'")
-"""   
+ 
 #griglia in 2D
+
+from inspect import trace
+
 
 num_griglia = [ 
     ["a", "b", "c"],
-    ["a", "b", "c"],
-    ["a", "b", "c"],
-    [0, 1]
-    [5, 6, 7, 8]
+    ["d", "e", "f"],
+    ["g", "h", "i"],
+    [1, 2, 3, 4]
 ]
 
-print(num_griglia[3][1])
+#for loop annidito
+for i in num_griglia:
+    for x in i:
+        print(x)
+#traduttore
+def Traduzione (frase):
+     traduzione = ""
+     for lettera in frase:
+         if lettera in ("AEIOUaeiou"):
+             traduzione = traduzione + "g"
+         else:
+             traduzione = traduzione + lettera
+     return(traduzione)
+            
+print(Traduzione(str(input("inserisci un frase: "))))
+      
+# try and excep: per frovare una cosa e se ci fosse un errore fare un'operazione
+
+try:
+    risultato = 1/0
+    numero_z = int(input("inserisci un numero: "))
+    print(risultato)
+except ValueError:
+    print("solo numeri interi")
+except ZeroDivisionError as err:
+    print(err)
+ """ 
+# leggere file esterni
+file_1 = open("ciao_1.txt", "r") # può essere cos' ("nome file", "r") "r"= read; "w": write; "r+" read and write; "a" append (agguingere info e basta)
+
+print(file_1.readable()) #per capire se si può leggere
+print(file_1.read()) #leggere tutto il file
+print(file_1.readline()) # leggere prima riga
+print(file_1.readline()) # legge seconda riga perchè la prima è stata letta prima
+print(file_1.readlines()) # tutte le righe in un lista, si può specificare la riga facendo print(nome_var.redlines()[num_riga])
+file_1.close() # bisogna poi chiuderlo
