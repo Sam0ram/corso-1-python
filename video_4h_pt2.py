@@ -154,7 +154,7 @@ except ValueError:
     print("solo numeri interi")
 except ZeroDivisionError as err:
     print(err)
- """ 
+
 # leggere file esterni
 file_1 = open("ciao_1.txt", "r") # può essere cos' ("nome file", "r") "r"= read; "w": write; "r+" read and write; "a" append (agguingere info e basta)
 
@@ -164,3 +164,22 @@ print(file_1.readline()) # leggere prima riga
 print(file_1.readline()) # legge seconda riga perchè la prima è stata letta prima
 print(file_1.readlines()) # tutte le righe in un lista, si può specificare la riga facendo print(nome_var.redlines()[num_riga])
 file_1.close() # bisogna poi chiuderlo
+
+file = open("ciao_1.txt", "a") # se mettessi la "w" rescriverebbe tutto il file con solo le cose che metto dopo. ma se metto un'altro nome al file e metto "w" allora crerà un altro file
+ 
+file.write("\nciao 11 (appesso)")
+ 
+file.close
+
+
+pyfile = open("strumenti_utili.py", "w")
+
+pyfile.write("hi")
+pyfile.close()
+# moduli e pip
+"""
+
+import strumenti_utili
+
+print(strumenti_utili.dadi(10))
+ 
