@@ -177,9 +177,43 @@ pyfile = open("strumenti_utili.py", "w")
 pyfile.write("hi")
 pyfile.close()
 # moduli e pip
-"""
+
 
 import strumenti_utili
 
 print(strumenti_utili.dadi(10))
  
+
+from strumenti_utili import prof
+    
+prof_fumagalli = prof("marco", False, 38)
+
+print(prof_fumagalli._è_cattivo)
+"""
+import random
+
+range_min = int(input("inserisci il valore minimo: "))
+range_max = int(input("inserisci il valore massimo: "))
+max_tent = int(input("inserisci il numero massimo di tentativi: "))
+
+random_num = random.randrange(range_min, range_max)
+print(random_num)
+risposta = int
+numero_tent = 0
+
+
+while risposta is not random_num and numero_tent is not max_tent:
+    numero_tent += 1
+    risposta = int(input("indovina il numero: "))
+    if risposta < random_num:
+        print("il numero è più alto")
+    elif risposta > random_num:
+        print("il numero è più basso")
+    elif risposta == random_num:
+        print("bravo hai indovinato")
+    if numero_tent == max_tent and risposta != random_num:
+        print("non hai più tentativi perdente. HA! HA!")
+
+
+
+
